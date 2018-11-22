@@ -1,0 +1,19 @@
+server:
+    port: 8084
+eureka:
+    client:
+        registerWithEureka: false
+        fetchRegistry: false
+        serviceUrl:
+            defaultZone: http://localhost:8084/eureka    
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+security:
+    basic:
+        enabled: true
+    user:
+        name: user
+        password: 123456                
