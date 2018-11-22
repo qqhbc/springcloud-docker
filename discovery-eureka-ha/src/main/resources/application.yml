@@ -1,0 +1,30 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+spring:
+    application:
+        name: discovery-eureka-ha
+--- 
+spring:
+    profiles: peer1
+server:
+    port: 8084
+eureka:
+    instance:
+        hostname: peer1
+    client:
+        serviceUrl:
+            defaultZone: http://peer2:8085/eureka/   
+---
+spring:
+    profiles: peer2
+server:
+    port:8085
+eureka:
+    instance:
+        hostname: peer2
+    client:
+        serviceUrl:
+            defaultZone: http://peer1:8084/eureka/                    
