@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yc.cloud</groupId>
-	<artifactId>consumer-movie-feign</artifactId>
+	<artifactId>consumer-movie-feign-hystrix-fallback</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -60,11 +60,17 @@
             <artifactId>spring-cloud-starter-ribbon</artifactId>
             <version>1.2.5.RELEASE</version>
         </dependency>
-        <!-- feign -->
+        <!-- 整合feign -->
         <dependency>
         	<groupId>org.springframework.cloud</groupId>
         	<artifactId>spring-cloud-starter-feign</artifactId>
         	<version>1.2.5.RELEASE</version>
+        </dependency>
+        <!-- 整合hystrix -->
+        <dependency>
+        	<groupId>org.springframework.cloud</groupId>
+        	<artifactId>spring-cloud-starter-hystrix</artifactId>
+        	<version>1.4.6.RELEASE</version>
         </dependency>
 	</dependencies>
 	
