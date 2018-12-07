@@ -1,0 +1,13 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/qqhbc/springcloud-config.git      
+          username: qqhbc                                                         
+          password: yc19950829
+          clone-on-start: true    
